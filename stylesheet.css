@@ -294,11 +294,83 @@ body[data-theme="dark"] .paper-link-btn:hover { color: var(--accent-orange); bor
 .exp-mentor { color: var(--text-secondary); font-size: 13.5px; margin-top: 4px; font-family: var(--mono-font); }
 .exp-date { font-size: 13px; color: var(--text-secondary); white-space: nowrap; font-family: var(--mono-font); padding-top: 2px; }
 
-/* ===================== AWARDS & SKILLS ===================== */
-.awards-list { list-style: none; padding: 0; margin: 0; }
-.awards-list li { position: relative; padding: 6px 0 6px 20px; font-size: 15px; line-height: 1.65; color: var(--page-text); }
-.awards-list li::before { content: "▸"; position: absolute; left: 0; top: 7px; color: var(--accent-orange); font-size: 14px; }
-.awards-list li strong { font-weight: 700; }
+/* ===================== SKILLS ===================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.skill-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-secondary);
+  padding: 22px 24px;
+  transition: var(--transition);
+}
+.skill-card:hover {
+  border-color: var(--primary);
+}
+body[data-theme="dark"] .skill-card:hover {
+  border-color: var(--accent-orange);
+}
+.skill-card h4 {
+  font-family: var(--mono-font);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-orange);
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+.skill-card p {
+  margin: 0;
+  color: var(--page-text);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+/* ===================== AWARDS ===================== */
+.awards-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.awards-list li {
+  position: relative;
+  padding: 16px 0 16px 20px;
+  border-bottom: 1px solid var(--border);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--page-text);
+}
+.awards-list li:last-child {
+  border-bottom: none;
+}
+.awards-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 17px;
+  color: var(--accent-orange);
+  font-size: 14px;
+}
+.awards-list li strong {
+  font-weight: 700;
+}
+.awards-list .yr {
+  font-family: var(--mono-font);
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  display: inline-block;
+  margin-left: 4px;
+}
+
+/* Chỉnh lại 1 cột cho Mobile */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ===================== FOOTER ===================== */
 .footer { text-align: center; padding: 30px 0; font-size: 13px; color: var(--text-secondary); border-top: 1px solid var(--border); margin-top: 20px; font-family: var(--mono-font); }
