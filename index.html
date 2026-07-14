@@ -113,6 +113,7 @@
     </section>
 
     <!-- ==================== PROJECTS ==================== -->
+    <!-- ==================== PROJECTS ==================== -->
     <section id="projects" class="section">
       <h2 class="section-heading">
         Selected Projects
@@ -135,17 +136,18 @@
             <div class="venue-row">
               <span class="venue-badge venue-cvpr">C / CUDA / Roofline</span>
               <span class="venue-badge venue-review" style="background:#dcfce7;color:#166534;border-color:#86efac;">Shipped · Jan – Jul 2026</span>
-              
-              <div class="measure">
-                <div class="m-head">
-                  <span>decode @ ctx=128, fp16, true M=1</span>
-                  <span class="m-val">511.7 tok/s</span>
-                </div>
-                <div class="m-track"><span class="m-fill" style="width:80%"></span></div>
-                <div class="m-foot">76-83% of llama.cpp F16 matched-precision performance</div>
+            </div>
+            
+            <div class="measure">
+              <div class="m-head">
+                <span>decode @ ctx=128, fp16, true M=1</span>
+                <span class="m-val">511.7 tok/s</span>
               </div>
+              <div class="m-track"><span class="m-fill" style="width:80%"></span></div>
+              <div class="m-foot">76-83% of llama.cpp F16 matched-precision performance</div>
+            </div>
 
-              <p class="paper-desc">
+            <p class="paper-desc">
               Engineered a single-model, forward-inference-only GPT-2-124M engine from scratch. Executed a rigorously gated optimization ladder featuring tiled shared-memory GEMM, online softmax flash attention, and KV caching with true M=1 GEMV. Documented honest negative results: weight-only INT8 yielded 0% speedup due to launch bounds at small batch sizes, and fused Layer Norm+matmul was 2.9% slower than isolated kernels.
             </p>
             <div class="paper-links paper-links-bottom">
@@ -190,6 +192,7 @@
           </div>
         </div>
 
+        <!-- Project 3 -->
         <div class="paper-item">
           <div class="paper-thumb">
             <img src="images/neuinteract.png" alt="NeuInteract">
